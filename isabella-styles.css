@@ -1,0 +1,226 @@
+/* Estilos específicos para la página de Isabella - Tema Púrpura/Violeta */
+
+.isabella-page {
+    background: linear-gradient(135deg, #8e44ad, #9b59b6);
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+.isabella-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navigation {
+    margin-bottom: 30px;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #a29bfe;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    background-color: #8b7ce8;
+    transform: translateY(-2px);
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.profile-header {
+    background: linear-gradient(135deg, #a29bfe, #6c5ce7);
+    padding: 40px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.profile-name {
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+.profile-subtitle {
+    font-size: 1.2em;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+.profile-content {
+    padding: 40px;
+}
+
+.info-section {
+    margin-bottom: 35px;
+}
+
+.info-section h2 {
+    color: #6c5ce7;
+    border-bottom: 3px solid #a29bfe;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.info-list, .interest-list {
+    list-style: none;
+    padding: 0;
+}
+
+.info-list li, .interest-list li {
+    background: #f8f7ff;
+    margin: 10px 0;
+    padding: 15px;
+    border-left: 4px solid #a29bfe;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+.info-list li:hover, .interest-list li:hover {
+    transform: translateX(10px);
+    background: #f0edff;
+}
+
+.info-list li::before, .interest-list li::before {
+    content: '✨';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.info-list li:hover::before, .interest-list li:hover::before {
+    opacity: 1;
+}
+
+.projects {
+    display: grid;
+    gap: 20px;
+}
+
+.project-item {
+    background: #faf9ff;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #a29bfe;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-item::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(162, 155, 254, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.project-item:hover::before {
+    opacity: 1;
+    animation: shimmer 1.5s ease-in-out;
+}
+
+.project-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(162, 155, 254, 0.3);
+}
+
+.project-item h3 {
+    color: #6c5ce7;
+    margin-top: 0;
+    font-size: 1.3em;
+    position: relative;
+    z-index: 1;
+}
+
+.project-item p {
+    color: #555;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* Efectos especiales para Isabella */
+.profile-header::after {
+    content: '💜';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    animation: pulse 2s infinite;
+}
+
+/* Animaciones */
+@keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0); }
+    50% { opacity: 1; transform: scale(1); }
+}
+
+.profile-card {
+    animation: fadeInUp 0.8s ease;
+}
+
+.info-section {
+    animation: fadeInUp 0.8s ease;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+}
+
+.profile-name {
+    background: linear-gradient(45deg, #fff, #e3f2fd, #fff);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}

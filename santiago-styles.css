@@ -1,0 +1,147 @@
+/* Estilos específicos para la página de Santiago - Tema Azul */
+
+.santiago-page {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+.santiago-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navigation {
+    margin-bottom: 30px;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    background-color: #357abd;
+    transform: translateY(-2px);
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.profile-header {
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    padding: 40px;
+    text-align: center;
+    color: white;
+}
+
+.profile-name {
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+.profile-subtitle {
+    font-size: 1.2em;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+.profile-content {
+    padding: 40px;
+}
+
+.info-section {
+    margin-bottom: 35px;
+}
+
+.info-section h2 {
+    color: #2c5f96;
+    border-bottom: 3px solid #4a90e2;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.info-list, .interest-list {
+    list-style: none;
+    padding: 0;
+}
+
+.info-list li, .interest-list li {
+    background: #f0f7ff;
+    margin: 10px 0;
+    padding: 15px;
+    border-left: 4px solid #4a90e2;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.info-list li:hover, .interest-list li:hover {
+    transform: translateX(10px);
+    background: #e3f2ff;
+}
+
+.projects {
+    display: grid;
+    gap: 20px;
+}
+
+.project-item {
+    background: #f8fbff;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #4a90e2;
+    transition: all 0.3s ease;
+}
+
+.project-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(74, 144, 226, 0.2);
+}
+
+.project-item h3 {
+    color: #2c5f96;
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+.project-item p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-card {
+    animation: fadeInUp 0.8s ease;
+}
+
+.info-section {
+    animation: fadeInUp 0.8s ease;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+}
